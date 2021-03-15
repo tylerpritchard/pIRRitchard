@@ -1,3 +1,12 @@
+#' pIRRitchard_plot
+#'
+#' Create a histogram of reliability estimates with or without shading boundaries.
+#'
+#' @param data an output from the main pIRRitchard function. Otherwise, a data.frame where column 1 = criteria/variable name and column 2 = fleiss/AC1 value
+#' @param benchmarks TRUE or FALSE. Include shaded boundaries of .2 width.
+#'
+#' @export
+
 pIRRitchard_plot <- function(data, benchmarks = T){
   mean_x <- round(mean(data[,2]), 3)
   median_x <- round(median(data[,2]), 3)
