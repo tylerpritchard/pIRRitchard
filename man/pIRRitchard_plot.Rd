@@ -1,7 +1,7 @@
 \name{pIRRitchard_plot}
 \alias{pIRRitchard_plot}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
+\title{pIRRitchard_plot
 %%  ~~function to do ... ~~
 }
 \description{
