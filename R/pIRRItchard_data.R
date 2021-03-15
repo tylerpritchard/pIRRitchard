@@ -8,7 +8,7 @@
 #'
 #' @return A unit X critera*raters data.frame
 #' @export
-piRRitchard_data <- function(criteria, raters, units){
+pIRRitchard_data <- function(criteria, raters, units){
   dat <- data.frame(id = 1:units)
   vars <- replicate(criteria*raters, round(runif(units)))
   crit <- paste0("Criteria", 1:criteria)
