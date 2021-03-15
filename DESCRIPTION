@@ -1,11 +1,11 @@
 Package: pIRRitchard
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Calculate Reliability for Many Criteria/Variables Across Many Raters
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Tyler R. Pritchard
+Maintainer: Tyler <tyler.pritchard@uoguelph.ca>
+Description: These series of functions are used to quickly calculate inter-rater reliability estimates (Fleiss's Kappa and Gwet's AC1) for many variables and raters. In addition, there are functions to 1) create a sample data.frame in wide-form to test the main function and 2) a quick plotting tool. 
+    All feedback is welcome.
+License: Freeware
 Encoding: UTF-8
 LazyData: true
