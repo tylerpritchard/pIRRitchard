@@ -4,9 +4,9 @@
 #'
 #' @param criteria number of criteria/variables to simulate
 #' @param raters number of raters to simulate
-#' @param units number os unit to simulate
+#' @param units number of unit to simulate
 #'
-#' @return A unit X critera*raters data.frame
+#' @return A unit X raters*criteria data.frame
 #' @export
 pIRRitchard_data <- function(criteria, raters, units){
   dat <- data.frame(id = 1:units)
