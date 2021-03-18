@@ -10,10 +10,10 @@
 #' @export
 pIRRitchard_data <- function(criteria, raters, units){
   dat <- data.frame(id = 1:units)
-  vars <- replicate(criteria*raters, round(runif(units)))
+  vars <- replicate(raters*criteria, round(runif(units)))
   crit <- paste0("Criteria", 1:criteria)
   rate <- paste0("Rater", 1:raters)
-  colnames(vars) <- apply(expand.grid(crit, rate), 1, paste, collapse=".")
+  colnames(vars) <- apply(expand.grid(rate, crit), 1, paste, collapse=".")
   library(tidyverse)
   dat <- cbind(dat, vars)
   dat <- dat %>%
