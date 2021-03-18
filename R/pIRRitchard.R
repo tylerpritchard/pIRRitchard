@@ -38,10 +38,12 @@ pIRRitchard <- function(data, n_raters, type){#need three inputs
   names(output)[1] <- ifelse(type == "ac1", "ac1", "fleiss")
   output[,1] <- ifelse(output[,1] < 0, 0, output[,1])
 
+  first_pulled <- colnames(data)[seq(2, length(data), n_raters)]
+  last_pulled <- colnames(data)[seq(2+(n_raters-1), length(data), n_raters)]
 
 
   output2 <- rownames_to_column(output, var = "variable") %>%
-    mutate(first_input = colnames(data)[seq(2, length(data), n_raters)],
-           last_input = colnames(data)[seq(2+(n_raters), length(data), n_raters)])
+    mutate(first_input = first_pulled,
+           last_input = last_pulled)
   return(output2)
 }
