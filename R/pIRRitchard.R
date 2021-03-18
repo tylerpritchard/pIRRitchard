@@ -42,7 +42,6 @@ pIRRitchard <- function(data, n_raters, type){#need three inputs
 
   output2 <- rownames_to_column(output, var = "variable") %>%
     mutate(first_input = colnames(data)[seq(2, length(data), n_raters)],
-           last_input = colnames(data)[seq(2+(n_raters), length(data), n_raters)]
-)
+           last_input = colnames(data)[seq(2+(n_raters), length(data), n_raters)])
   return(output2)
 }
