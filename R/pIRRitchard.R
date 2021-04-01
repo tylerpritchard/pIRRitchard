@@ -1,6 +1,6 @@
 #' pIRRitchard
 #'
-#' Quickly get reliability estimates of multiple criteria/variables and raters
+#' Quickly get reliability estimates of multiple criteria/variables and raters.
 #'
 #' @param data a wide data.frame where col 1 = unit ID and subsequent columns are a criteria/variable and rater progression. For 2 variables and2 raters: C1id, C2v1r1, C3v1r2, C4v2r1, C5v2r2.
 #' @param n_raters number of raters. Used in determining sequences pulled for reliability estimates.
@@ -36,7 +36,7 @@ pIRRitchard <- function(data, n_raters, type){#need three inputs
   ### adjusting variable names
 
   names(output)[1] <- ifelse(type == "ac1", "ac1", "fleiss")
-  output[,1] <- ifelse(output[,1] < 0, 0, output[,1])
+
 
   first_pulled <- colnames(data)[seq(2, length(data), n_raters)]
   last_pulled <- colnames(data)[seq(2+(n_raters-1), length(data), n_raters)]
