@@ -15,7 +15,7 @@ pIRRitchard_plot <- function(data, benchmarks = F){
 
     plot <- ggplot(data, aes_string(colnames(data)[2]))+
       geom_histogram(fill = "white", color = "black", boundary = 0, binwidth = .05) +
-      coord_cartesian(xlim=c(0,1))+
+      coord_cartesian(xlim=c(-1,1))+
       scale_x_continuous(breaks=seq(-1, 1, .1))+
       theme_minimal(15) +
       geom_vline(xintercept = mean_x, linetype=2, color = "red")+
@@ -32,7 +32,7 @@ pIRRitchard_plot <- function(data, benchmarks = F){
   else if (benchmarks == F){
     plot <- ggplot(data, aes_string(colnames(data)[2]))+
       geom_histogram(fill = "white", color = "black", boundary = 0, binwidth = .05) +
-      coord_cartesian(xlim=c(0,1))+
+      coord_cartesian(xlim=c(-1,1))+
       scale_x_continuous(breaks=seq(-1, 1, .1))+
       theme_minimal(15) +
       geom_vline(xintercept = mean_x, linetype=2, color = "red")+
